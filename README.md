@@ -2,6 +2,7 @@
 
 ## Project Overview
 Big Head Soccer is a 2-player arcade-style game implemented as the final project for the Advanced Verilog course at Cal Poly Pomona. It runs entirely on an FPGA using a System-on-Chip (SoC) architecture composed of:
+- On the Nexys A7 100T
 - Custom SystemVerilog hardware cores for sprite rendering, keyboard input, and audio.
 - A MicroBlaze soft processor running C++ game logic compiled with Xilinx Vitis.
 - VGA display output for graphics, and PS2 keyboard for real-time controls.
@@ -69,3 +70,18 @@ All peripherals—video, PS2 input, sound, and sprite control—are connected to
 - Trigger sound effects
 - Control sprite positions
 - Update score and game state
+
+### Further Improvements
+Several features could be added to significantly enhance the gameplay experience and technical complexity of Big Head Soccer:
+
+HDMI Video Output
+- Upgrade the video pipeline from VGA to HDMI to support higher resolutions, digital audio, and modern displays. This would require implementing a TMDS encoder and adapting the pixel clock and timing generator for HDMI standards.
+
+Expanded Sprite and Map Memory
+- Move sprite and map assets to external memory (such as DDR or SRAM) to allow for more detailed characters, larger playing fields, and multi-frame animations. This change would involve modifying the sprite engine to fetch data from external memory interfaces.
+
+Power-Ups and Special Abilities
+- Add power-ups like speed boosts, stun effects, or temporary shields. These would require additional game state logic, input handlers, and corresponding sprites or visual cues in hardware.
+
+AI-Controlled Player
+- Implement a basic AI opponent capable of tracking the ball and making decisions (e.g., jump, move, kick). The AI logic could run in software or be partially accelerated with hardware (e.g., a simple FSM), allowing single-player mode or human vs. CPU matches.
