@@ -50,6 +50,7 @@ Sprites are stored in block RAM initialized from .mem files.
 Each player controls their character using a PS/2 keyboard. A custom ps2_keyboard core decodes serial scan codes and maintains a current key state register. This register is memory-mapped and read by the MicroBlaze game logic.
 
 Player 1: WASD, Space
+
 Player 2: Arrow keys, Right Shift
 
 Multiple key presses are supported through key state tracking.
@@ -62,7 +63,7 @@ DDFS Core: Generates tones over a 3-octave chromatic scale by controlling freque
 
 Each sound (kick, goal, countdown, win) is initiated by the MicroBlaze writing specific control values to the sound cores through AXI-mapped registers.
 
-AXI Integration
+### AXI Integration
 All peripherals—video, PS2 input, sound, and sprite control—are connected to the MicroBlaze using AXI-Lite interfaces. This allows the C++ game logic to:
 - Poll input states (keyboards)
 - Trigger sound effects
