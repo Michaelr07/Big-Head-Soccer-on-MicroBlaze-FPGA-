@@ -11,9 +11,9 @@ Big Head Soccer is a 2-player arcade-style game implemented as the final project
 - Smooth sprite animation rendered over VGA
 - Collision detection between ball, players, and goals
 - Custom audio system using ADSR envelopes and DDFS for:
-- Kick sounds
-- Countdown music
-- Goal effects
-- Victory tune
+  - Kick sounds
+  - Countdown music
+  - Goal effects
+  - Victory tune
 
 Full co-design of hardware (SystemVerilog) and software (C++) which are further described in their respective folders
